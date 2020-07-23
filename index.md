@@ -1,37 +1,84 @@
-## Welcome to GitHub Pages
+## AIS3 environment requirements
 
-You can use the [editor on GitHub](https://github.com/Japokit/ais3_2020_env/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+### Virtual Machine prepared by AIS3
+#### VM1
+- Download: [Link](https://)
+- Default user/password: ais3/ais32020
+- OS: Ubuntu 20.04 Desktop
+- package
+	1. git
+	2. python3
+    3. python2
+	3. docker
+	4. BloodHoundAD
+	5. neo4j
+	6. proxychains
+	7. hashcat
+	8. freerdp2-x11
+	9. Maltego
+	10. maltego-trx
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+----------
+### Package list
+#### package in Linux
+- git
+	- version: 2.25.1
+- python3
+	- version: 3.8.2
+- python2
+    - version: 2.7.17
+- docker
+    - version: 19.03.8
+- BloodHoundAD
+	- https://github.com/BloodHoundAD/BloodHound
+- neo4j
+    - version: 4.0.6
+    - default user/password: neo4j/neo4j
+	- https://neo4j.com/download-center/#community
+- proxychains
+	- https://github.com/haad/proxychains
+- hashcat
+    - version: 5.1.0
+	- https://hashcat.net/hashcat/
+- freerdp2-x11
+  - version: 2.1.1
+- Maltego
 
-### Markdown
+  - 自行註冊 Maltego 帳號: [Link](https://www.maltego.com/ce-registration/)
+- maltogo-trx
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+#### package in Windows
 
-```markdown
-Syntax highlighted code block
+- VMware workstation
+	- version: 15 Pro
+	- Need to install in your NB
+	- https://www.vmware.com/go/getworkstation-win
 
-# Header 1
-## Header 2
-### Header 3
+#### Install script in Ubuntu 20.04 Desktop
+```bash
+wget -O - https://debian.neo4j.com/neotechnology.gpg.key | apt-key add -
+echo 'deb https://debian.neo4j.com stable 4.0' | tee /etc/apt/sources.list.d/neo4j.list
+apt-get update
 
-- Bulleted
-- List
+apt-get install \
+docker.io=19.03.8-0ubuntu1.20.04 \
+git=1:2.25.1-1ubuntu3 \
+python2=2.7.17-2ubuntu4 \
+neo4j=1:4.0.6 \
+hashcat=5.1.0+ds1-2 \
+freerdp2-x11=2.1.1+dfsg1-0ubuntu0.20.04.1 \
+python3-pip
 
-1. Numbered
-2. List
+git clone https://github.com/BloodHoundAD/BloodHound
+git clone https://github.com/haad/proxychains
 
-**Bold** and _Italic_ and `Code` text
+cd proxychains/
+./configure
+make
+sudo make install
 
-[Link](url) and ![Image](src)
+wget https://maltego-downloads.s3.us-east-2.amazonaws.com/linux/Maltego.v4.2.11.13104.deb
+dpkg -i Maltego.v4.2.11.13104.deb
+
+pip3 install maltego-trx
 ```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Japokit/ais3_2020_env/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
