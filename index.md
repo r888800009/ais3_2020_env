@@ -44,7 +44,8 @@
   - version: 2.1.1
 - Maltego
 
-  - 自行註冊 Maltego 帳號: [Link](https://www.maltego.com/ce-registration/)
+  - 請自行註冊 Maltego 帳號
+  - https://www.maltego.com/ce-registration/
 - maltogo-trx
 
 ### package in Windows
