@@ -35,7 +35,7 @@
     - version: 4.0.6
     - default user/password: neo4j/neo4j
 - proxychains
-	- (https://github.com/haad/proxychains](https://github.com/haad/proxychains)
+	- [https://github.com/haad/proxychains](https://github.com/haad/proxychains)
 - hashcat
     - version: 5.1.0
 - freerdp2-x11
