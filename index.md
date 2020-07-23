@@ -1,7 +1,7 @@
-## AIS3 environment requirements
+# AIS3 environment requirements
 
-### Virtual Machine prepared by AIS3
-#### VM1
+## Virtual Machine prepared by AIS3
+### VM1
 - Download: [Link](https://)
 - Default user/password: ais3/ais32020
 - OS: Ubuntu 20.04 Desktop
@@ -47,14 +47,14 @@
   - 自行註冊 Maltego 帳號: [Link](https://www.maltego.com/ce-registration/)
 - maltogo-trx
 
-#### package in Windows
+### package in Windows
 
 - VMware workstation
 	- version: 15 Pro
 	- Need to install in your NB
 	- https://www.vmware.com/go/getworkstation-win
 
-#### Install script in Ubuntu 20.04 Desktop
+### Install script in Ubuntu 20.04 Desktop
 ```bash
 wget -O - https://debian.neo4j.com/neotechnology.gpg.key | apt-key add -
 echo 'deb https://debian.neo4j.com stable 4.0' | tee /etc/apt/sources.list.d/neo4j.list
