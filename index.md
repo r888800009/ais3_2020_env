@@ -2,7 +2,7 @@
 
 ## Virtual Machine prepared by AIS3
 ### VM1
-- Download: [Link](https://)
+- Download: [Link](https://drive.google.com/file/d/1XkMbA83gMI0uoz9T1V0_PyL4GK6S0o1R/view?usp=sharing)
 - Default user/password: ais3/ais32020
 - OS: Ubuntu 20.04 Desktop
 - package
